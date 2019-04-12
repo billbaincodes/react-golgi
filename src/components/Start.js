@@ -1,16 +1,19 @@
 import React from 'react'
 import StartButton from './StartButton.js'
 
-const Start = () => {
+const Start = ({ menuToggle }) => {
 
-  let state = {
-    clickToggle: false
+  let datefinder = () => {
+    let date = new Date
+    return date.getTime
   }
-
 
   return(
     <div className="dock">
-      <StartButton />
+      <StartButton menuToggle={menuToggle} />
+      <div className="dock-time">
+        10:23
+      </div>
     </div>  
   )
 }

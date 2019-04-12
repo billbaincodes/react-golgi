@@ -1,23 +1,29 @@
 import React from "react";
+import recycle from "../assets/recylcebin.gif";
 
-const StartMenu = () => {
+const StartMenu = ({ aboutWindow }) => {
   return (
     <div class="start-menu">
       <div class="title-container">
         <div class="title">
-          Windows<span>98</span>
+          BillBainCodes<span>98</span>
         </div>
       </div>
       <ul>
-        <li class="windows-update">Windows Update</li>
+        <li class="windows-update">Full Stack Developer</li>
         <hr />
-        <li class="programs">Programs</li>
-        <li class="favorites">Favorites</li>
-        <li class="documents">Documents</li>
-        <li class="settings">Settings</li>
-        <li class="find">Find</li>
-        <li class="help">Help</li>
-        <li class="run">Run...</li>
+        <li class="programs"> Tech</li>
+        <li class="favorites">Skills</li>
+        <li class="documents">Resume</li>
+        <a href="https://github.com/billbaincodes" target="blank">
+          <li class="settings"> GitHub </li>
+        </a>
+        <a href="https://www.linkedin.com/in/billbaincodes/" target="blank">
+          <li class="find"> LinkedIn </li>
+        </a>
+        <li onClick={aboutWindow} class="help">
+          About
+        </li>
         <hr />
         <li class="log-off ok">Log Off</li>
         <li class="shut-down ok">Shut Down...</li>

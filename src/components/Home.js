@@ -1,12 +1,16 @@
 import React from "react";
 import StartMenu from "../components/StartMenu";
+import Start from "./Start.js"
+
 import recycle from "../assets/recylcebin.gif";
 import folder from "../assets/documents.png";
 import myPC from "../assets/mycomputer.png";
 
 const Home = () => {
+
+  
   let state = {
-    menuToggle: false
+    menuToggle: true
   };
 
   return (
@@ -27,6 +31,7 @@ const Home = () => {
       </div>
 
       {state.menuToggle && <StartMenu />}
+      <Start />
     </div>
   );
 };
