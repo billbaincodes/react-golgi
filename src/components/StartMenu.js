@@ -21,7 +21,7 @@ const StartMenu = ({ aboutWindow }) => {
         <a href="https://www.linkedin.com/in/billbaincodes/" target="blank">
           <li class="find"> LinkedIn </li>
         </a>
-        <li onClick={aboutWindow} class="help">
+        <li onClick={() => aboutWindow(true)} class="help">
           About
         </li>
         <hr />
