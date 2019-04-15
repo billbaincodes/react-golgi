@@ -19,7 +19,10 @@ class App extends Component {
   };
 
   aboutWindow = (toggle) => {
-    this.setState({ aboutToggle: toggle, menuToggle: false });
+    this.setState({ aboutToggle: toggle, menuToggle: false, techToggle: false });
+  }
+  techWindow = (toggle) => {
+    this.setState({ techToggle: toggle, menuToggle: false, aboutToggle: false });
   }
 
 
@@ -28,11 +31,11 @@ class App extends Component {
       <div>
         <div>
           <IconList />
-          <TechWindow />
+          {this.state.techToggle && <TechWindow techWindow={this.techWindow}/> }
           {this.state.aboutToggle && <AboutWindow aboutWindow={this.aboutWindow}/> }
-          {this.state.menuToggle && <StartMenu aboutWindow={this.aboutWindow} />}
+          {this.state.menuToggle && <StartMenu aboutWindow={this.aboutWindow} techWindow={this.techWindow} />}
           
-          <Start menuToggle={this.menuToggle} />
+          <Start menuToggle={this.menuToggle}/>
 
         </div>
         

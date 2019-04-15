@@ -17,6 +17,8 @@ a {
   flex-direction: column;
   margin-left: 20px;
   margin-top: 20px;
+  position: absolute;
+  z-index: -1;
 }
 .icon {
   display: block;
@@ -78,7 +80,6 @@ a {
 }
 
 
-
 .start-menu {
   position: absolute;
   bottom: 38px;
@@ -138,10 +139,13 @@ a {
 }
 
 .window-container {
-  text-align: center;
   position: relative;
+  text-align: center;
   width: 40vw;
-  margin: 0 auto;
+  margin: auto;
+  padding-top: 20px;
+  z-index: 2;
+  overflow-y: scroll;
 }
 
 .window {
@@ -157,7 +161,9 @@ a {
   /* background-position: 15px 55px; */
   /* display: inline-block; */
   position: relative;
-  bottom: 30vh;
+  flex-wrap:wrap;
+  max-height: 900px;
+
 }
 
 .window-title {
@@ -209,6 +215,7 @@ a {
 .window-buttons {
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 10px;
 }
 
 .window-buttons > div {
@@ -237,16 +244,35 @@ a {
   background-position: 5px center;
 }
 
-.tech-list {
+.tech-list{
+  display: flex;
   background-color: white;
   border-left: black 2px solid;
   border-top: black 2px solid;
   border-right: rgb(255, 255, 255) 2px solid;
   border-bottom: rgb(255, 255, 255) 2px solid;
+  align-items: flex-start;
+  flex-direction: row;
+  margin-top: 10px;
+  flex-wrap: wrap;
+
 }
 
-.tech-list > img {
-  height: 60px;
+.tech-icon {
+  text-align: center;
+  width: 100px;
+  height: 100px;
+}
+
+.tech-icon > img {
+  text-align: center;
+  width: 75%;
+}
+
+.tech > p {
+  margin-top: 5px;
+  color: white;
+  font-size: 1rem;
 }
 
 .start-menu ul li.programs {
@@ -277,7 +303,7 @@ a {
   background-image: url(https://66.media.tumblr.com/1f29d811f6e2bb3f8fbe912057fc6e58/tumblr_odqaag4zd41vgs7gco10_75sq.png);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 890px) {
   .window-container{
     width: 95vw;
   }

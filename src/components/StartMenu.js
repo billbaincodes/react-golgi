@@ -1,7 +1,7 @@
 import React from "react";
 import recycle from "../assets/recylcebin.gif";
 
-const StartMenu = ({ aboutWindow }) => {
+const StartMenu = ({ aboutWindow , techWindow}) => {
   return (
     <div class="start-menu">
       <div class="title-container">
@@ -12,7 +12,7 @@ const StartMenu = ({ aboutWindow }) => {
       <ul>
         <li class="windows-update">Full Stack Developer</li>
         <hr />
-        <li class="programs"> Tech</li>
+        <li onClick={() => techWindow(true)} class="programs"> Tech</li>
         <li class="favorites">Skills</li>
         <li class="documents">Resume</li>
         <a href="https://github.com/billbaincodes" target="blank">
