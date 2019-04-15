@@ -1,7 +1,6 @@
 import React from "react";
-import recycle from "../assets/recylcebin.gif";
 
-const StartMenu = ({ aboutWindow , techWindow}) => {
+const StartMenu = ({ aboutWindow, techWindow }) => {
   return (
     <div class="start-menu">
       <div class="title-container">
@@ -12,16 +11,18 @@ const StartMenu = ({ aboutWindow , techWindow}) => {
       <ul>
         <li class="windows-update">Full Stack Developer</li>
         <hr />
-        <li onClick={() => techWindow(true)} class="programs"> Tech</li>
-        <li class="favorites">Skills</li>
-        <li class="documents">Resume</li>
+        <li onClick={() => techWindow(true)} class="programs menu-button">
+          Tech
+        </li>
+        <li class="favorites menu-button">Skills</li>
+        <li class="documents menu-button">Resume</li>
         <a href="https://github.com/billbaincodes" target="blank">
-          <li class="settings"> GitHub </li>
+          <li class="settings menu-button"> GitHub </li>
         </a>
         <a href="https://www.linkedin.com/in/billbaincodes/" target="blank">
-          <li class="find"> LinkedIn </li>
+          <li class="find menu-button"> LinkedIn </li>
         </a>
-        <li onClick={() => aboutWindow(true)} class="help">
+        <li onClick={() => aboutWindow(true)} class="help menu-button">
           About
         </li>
         <hr />
