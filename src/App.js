@@ -3,6 +3,7 @@ import Start from "./components/Start";
 import StartMenu from "./components/StartMenu";
 import AboutWindow from "./components/Windows/AboutWindow.js"
 import TechWindow from "./components/Windows/TechWindow.js"
+import ProjectWindow from "./components/Windows/ProjectWindow.js"
 import "./App.css";
 import IconList from "./IconList";
 import ResumeWindow from "./components/Windows/ResumeWindow";
@@ -11,7 +12,8 @@ class App extends Component {
   state = {
     menuToggle: false,
     aboutToggle: false,
-    techToggle: false
+    techToggle: false,
+    projectToggle: true,
 
   };
 
@@ -20,26 +22,24 @@ class App extends Component {
   };
 
   aboutWindow = (toggle) => {
-    this.setState({ aboutToggle: toggle, menuToggle: false, techToggle: false });
+    this.setState({ aboutToggle: toggle, menuToggle: false, techToggle: false, projectWindow: false });
   }
   techWindow = (toggle) => {
-    this.setState({ techToggle: toggle, menuToggle: false, aboutToggle: false });
+    this.setState({ techToggle: toggle, menuToggle: false, aboutToggle: false, projectWindow: false });
   }
-
-  resumeWindow = (toggle) => {
-    this.setState({ resumeToggle: toggle, menuToggle: false, aboutToggle: false });
+  projectWindow = (toggle) => {
+    this.setState({ projectToggle: toggle, menuToggle: false, aboutToggle: false, techToggle: false });
   }
-
 
   render() {
     return (
       <div>
         <div>
           <IconList />
-          {/* <ResumeWindow resumeWindow={this.resumeWindow}/> */}
+          {this.state.projectToggle && <ProjectWindow projectWindow={this.projectWindow} />}
           {this.state.techToggle && <TechWindow techWindow={this.techWindow}/> }
           {this.state.aboutToggle && <AboutWindow aboutWindow={this.aboutWindow}/> }
-          {this.state.menuToggle && <StartMenu aboutWindow={this.aboutWindow} techWindow={this.techWindow} />}
+          {this.state.menuToggle && <StartMenu aboutWindow={this.aboutWindow} techWindow={this.techWindow} projectWindow={this.projectWindow} />}
           
           <Start menuToggle={this.menuToggle}/>
 

@@ -1,7 +1,7 @@
 import React from "react";
 import resume from "../assets/billBainResume.pdf"
 
-const StartMenu = ({ aboutWindow, techWindow }) => {
+const StartMenu = ({ aboutWindow, techWindow, projectWindow }) => {
   return (
     <div class="start-menu">
       <div class="title-container">
@@ -15,7 +15,7 @@ const StartMenu = ({ aboutWindow, techWindow }) => {
         <li onClick={() => techWindow(true)} class="programs menu-button">
           Tech
         </li>
-        <li class="favorites menu-button">Skills</li>
+        <li onClick={() => projectWindow(true)} class="favorites menu-button">Projects</li>
         <a href={resume} target="blank">
         <li class="documents menu-button">Resume</li>
         </a>
@@ -29,7 +29,9 @@ const StartMenu = ({ aboutWindow, techWindow }) => {
           About
         </li>
         <hr />
-        <li class="log-off ok">Log Off</li>
+        <a href="mailto:billbaincodes@gmail.com">
+        <li class="log-off ok">Email Me</li>
+        </a>
         <li class="shut-down ok">Shut Down...</li>
       </ul>
     </div>

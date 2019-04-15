@@ -30,7 +30,7 @@ const AboutWindow = ({ aboutWindow }) => {
             However, I've come to see that coding is an extremely creative
             undertaking as well. You need to be able to readily adapt,
             experiment and think about problems in non-traditional or innovative
-            ways.
+            ways .
           </p>
           <div className="window-buttons">
             <div onClick={() => aboutWindow(false)}>OK</div>

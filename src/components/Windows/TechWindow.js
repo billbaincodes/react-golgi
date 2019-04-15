@@ -1,6 +1,7 @@
 import React from "react";
 import bootstrapLogo from "../../assets/tech/Bootstrap-Logo.png";
 import reactLogo from "../../assets/tech/React-Logo.png";
+import vueLogo from "../../assets/tech/58482acecef1014c0b5e4a1e.png"
 
 import jsLogo from "../../assets/tech/JavaScript-Logo.jpg"
 import restLogo from "../../assets/tech/RestAPI-Logo.png"
@@ -29,23 +30,23 @@ const TechWindow = ({ techWindow }) => {
           <div className="tech-list">
             <div className="tech-icon">
               <img src={jsLogo} alt="bootstrap framework" />
-              JavaScript
+              <p>JavaScript</p>
             </div>
             <div className="tech-icon">
               <img src={reactLogo} alt="bootstrap framework" />
-              React.js
+              <p>React</p>
             </div>
             <div className="tech-icon">
-              <img src={bootstrapLogo} alt="bootstrap framework" />
-              Bootstrap
+              <img src={vueLogo} alt="html framework" />
+              <p>Vue</p>
             </div>
             <div className="tech-icon">
-              <img src={htmlLogo} alt="html framework" />
-              HTML5
+              <img src="https://vue-native.io/images/logo.png" alt="html framework" />
+              <p>Vue Native</p>
             </div>
             <div className="tech-icon">
-              <img src={cssLogo} alt="css framework" />
-              CSS3
+              <img src={bootstrapLogo} alt="html framework" />
+              <p>Bootstrap</p>
             </div>
           </div>
         </div>
@@ -53,25 +54,25 @@ const TechWindow = ({ techWindow }) => {
         <div class="window-body">
           <h3 className="window-headline">Back End</h3>
           <div className="tech-list">
-            <div className="tech-icon">
-              <img src={nodeLogo} alt="node framework" />
-              Node.js
+          <div className="tech-icon">
+              <img src={nodeLogo} alt="bootstrap framework" />
+              <p>Node</p>
             </div>
             <div className="tech-icon">
               <img src={restLogo} alt="bootstrap framework" />
-              RESTful API
+              <p>RESTful API</p>
             </div>
             <div className="tech-icon">
-              <img src={pgLogo} alt="postgreSQL" />
-              PostgreSQL
+              <img src={pgLogo} alt="bootstrap framework" />
+              <p>PostgreSQL</p>
             </div>
             <div className="tech-icon">
-              <img src={gitLogo} alt="postgreSQL" />
-              Git
+              <img src={knexLogo} alt="bootstrap framework" />
+              <p>Knex</p>
             </div>
             <div className="tech-icon">
-              <img src={knexLogo} alt="postgreSQL" />
-              Knex
+              <img src="https://i.imgur.com/A8giVX5.png" alt="html framework" />
+              <p>Git Workflow</p>
             </div>
           </div>
         </div>
