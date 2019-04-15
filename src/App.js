@@ -1,24 +1,25 @@
 import React, { Component } from "react";
 import Start from "./components/Start";
 import StartMenu from "./components/StartMenu";
-import Window from "./components/Window.js"
-
+import AboutWindow from "./components/Windows/AboutWindow.js"
+import TechWindow from "./components/Windows/TechWindow.js"
 import "./App.css";
 import IconList from "./IconList";
 
 class App extends Component {
   state = {
     menuToggle: false,
-    aboutToggle: false
+    aboutToggle: false,
+    techToggle: true
+
   };
 
   menuToggle = () => {
     this.setState({ menuToggle: !this.state.menuToggle });
   };
 
-  aboutWindow = () => {
-    this.setState({ aboutToggle: !this.state.aboutToggle, menuToggle: false });
-    console.log("holy shit!!! ABOUT")
+  aboutWindow = (toggle) => {
+    this.setState({ aboutToggle: toggle, menuToggle: false });
   }
 
 
@@ -27,7 +28,8 @@ class App extends Component {
       <div>
         <div>
           <IconList />
-          {this.state.aboutToggle && <Window /> }
+          <TechWindow />
+          {this.state.aboutToggle && <AboutWindow aboutWindow={this.aboutWindow}/> }
           {this.state.menuToggle && <StartMenu aboutWindow={this.aboutWindow} />}
           
           <Start menuToggle={this.menuToggle} />

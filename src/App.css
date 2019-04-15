@@ -3,7 +3,7 @@ body {
   background-image: url("https://i.imgur.com/ehLJyds.png");
   background-repeat: no-repeat;
   background-position-x: 50%;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: sans-serif;
 }
 
 a {
@@ -140,44 +140,85 @@ a {
 .window-container {
   text-align: center;
   position: relative;
+  width: 40vw;
+  margin: 0 auto;
 }
 
 .window {
+  display: flex;
+  flex-direction: column;
   border-top: 2px solid white;
   border-right: 2px solid #222;
   border-bottom: 2px solid #222;
   border-left: 2px solid white;
   background: #c0c0c0;
-  background-repeat: no-repeat;
-  background-size: 60px;
-  background-position: 15px 55px;
-  display: inline-block;
+  /* background-repeat: no-repeat; */
+  /* background-size: 60px; */
+  /* background-position: 15px 55px; */
+  /* display: inline-block; */
   position: relative;
-  bottom: 230px;
+  bottom: 30vh;
 }
 
 .window-title {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   background: linear-gradient(90deg, #000184, #0f80cd);
-  padding: 4px 6px 5px;
+  padding: 4px 7px 5px;
   color: white;
   font-size: 15px;
   margin-right: 2px;
   text-align: left;
+  font-weight: bold;
 }
 .window-title:hover {
   cursor: move;
 }
 
-.window-button-row {
-  margin: 10px 20px 12px;
-  float: right;
-}
 
 .window-body {
-  padding: 18px 90px 20px 100px;
+  padding: 10px 20px 10px 20px;
   font-size: 14px;
   text-align: left;
+}
+
+.window-body > img {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+.close-button {
+  background: #c0c0c0;
+  border-right: black 2px solid;
+  border-bottom: black 2px solid;
+  border-left: rgb(255, 255, 255) 2px solid;
+  border-top: rgb(255, 255, 255) 2px solid;
+  text-align: center;
+  color: black;
+  width: 20px;
+  height: 17px;
+}
+
+.window-headline {
+  text-decoration: black underline;
+  margin-bottom: 0px;
+}
+
+.window-buttons {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.window-buttons > div {
+  text-align: center;
+  width: 100px;
+  height: 20px;
+  border-right: black 2px solid;
+  border-bottom: black 2px solid;
+  border-left: rgb(255, 255, 255) 2px solid;
+  border-top: rgb(255, 255, 255) 2px solid;
 }
 
 .dock-time {
@@ -194,6 +235,18 @@ a {
   background-size: 20px;
   background-repeat: no-repeat;
   background-position: 5px center;
+}
+
+.tech-list {
+  background-color: white;
+  border-left: black 2px solid;
+  border-top: black 2px solid;
+  border-right: rgb(255, 255, 255) 2px solid;
+  border-bottom: rgb(255, 255, 255) 2px solid;
+}
+
+.tech-list > img {
+  height: 60px;
 }
 
 .start-menu ul li.programs {
@@ -222,4 +275,14 @@ a {
 }
 .start-menu ul li.shut-down {
   background-image: url(https://66.media.tumblr.com/1f29d811f6e2bb3f8fbe912057fc6e58/tumblr_odqaag4zd41vgs7gco10_75sq.png);
+}
+
+@media (max-width: 700px) {
+  .window-container{
+    width: 95vw;
+  }
+  .window-body > img {
+    width: 35%;
+  }
+
 }
