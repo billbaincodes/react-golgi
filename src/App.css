@@ -2,7 +2,8 @@ body {
   background-color: #008080;
   background-image: url("https://i.imgur.com/ehLJyds.png");
   background-repeat: no-repeat;
-  background-position-x: 50%;
+  background-position-x: center;
+  background-position-y: 40px;
   font-family: sans-serif;
   cursor: pointer;
 }
@@ -10,6 +11,10 @@ body {
 a {
   color: black;
   text-decoration: none;
+}
+
+iframe {
+  height: 500px;
 }
 
 .icon-list{
@@ -329,6 +334,10 @@ a {
   }
   .window-body > img {
     width: 35%;
+  }
+  body {
+    background-image: none;
+
   }
 
 }

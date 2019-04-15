@@ -1,4 +1,5 @@
 import React from "react";
+import resume from "../assets/billBainResume.pdf"
 
 const StartMenu = ({ aboutWindow, techWindow }) => {
   return (
@@ -15,7 +16,9 @@ const StartMenu = ({ aboutWindow, techWindow }) => {
           Tech
         </li>
         <li class="favorites menu-button">Skills</li>
+        <a href={resume} target="blank">
         <li class="documents menu-button">Resume</li>
+        </a>
         <a href="https://github.com/billbaincodes" target="blank">
           <li class="settings menu-button"> GitHub </li>
         </a>
