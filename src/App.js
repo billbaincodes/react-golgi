@@ -5,16 +5,14 @@ import AboutWindow from "./components/Windows/AboutWindow.js"
 import TechWindow from "./components/Windows/TechWindow.js"
 import ProjectWindow from "./components/Windows/ProjectWindow.js"
 import "./App.css";
-import IconList from "./IconList";
-import ResumeWindow from "./components/Windows/ResumeWindow";
+import IconList from "./components/IconList.js"
 
 class App extends Component {
   state = {
     menuToggle: false,
     aboutToggle: false,
     techToggle: false,
-    projectToggle: true,
-
+    projectToggle: true
   };
 
   menuToggle = () => {

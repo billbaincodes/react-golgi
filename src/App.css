@@ -6,6 +6,7 @@ body {
   background-position-y: 40px;
   font-family: sans-serif;
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 a {
@@ -14,7 +15,12 @@ a {
 }
 
 iframe {
-  height: 500px;
+  height: 169px;
+  width: 300px;
+  border-top: 2px solid white;
+  border-right: 2px solid #222;
+  border-bottom: 2px solid #222;
+  border-left: 2px solid white;
 }
 
 .icon-list{
@@ -323,6 +329,7 @@ iframe {
 .project-menu {
   margin-top: 6px;
   background: #c0c0c0;
+  padding-bottom: 20px;
 }
 
 .project-header {
@@ -338,12 +345,15 @@ iframe {
 }
 
 .project-body {
-  height: 100%;
+  /* height: 100%; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border-right: 1px solid black;
   border-bottom: 1px solid black;
   border-top: 1px solid white;
   border-left: 1px solid white;
-  padding: 5px
+  padding: 5px;
 }
 
 .active {
@@ -354,7 +364,13 @@ iframe {
   transform: translateY(1px);
 }
 
+.project-body > h1 {
+  margin: 0;
+}
 
+.project-body > h3 {
+  margin: 0;
+}
 
 .start-menu ul li.programs {
   background-image: url(https://66.media.tumblr.com/49ed6c0ebac47753e08e85c230d97d03/tumblr_odqaag4zd41vgs7gco2_75sq.png);
@@ -383,6 +399,8 @@ iframe {
 .start-menu ul li.shut-down {
   background-image: url(https://66.media.tumblr.com/1f29d811f6e2bb3f8fbe912057fc6e58/tumblr_odqaag4zd41vgs7gco10_75sq.png);
 }
+
+
 
 @media (max-width: 680px) {
 

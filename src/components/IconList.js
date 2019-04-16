@@ -1,7 +1,8 @@
 import React from "react";
-import recycle from "./assets/recylcebin.gif";
-import folder from "./assets/documents.png";
-import myPC from "./assets/mycomputer.png";
+import recycle from "../assets/recylcebin.gif";
+import folder from "../assets/documents.png";
+import myPC from "../assets/mycomputer.png";
+import myst from "../assets/mystIcon.png"
 
 const IconList = () => {
   return (
