@@ -44,7 +44,7 @@ class ProjectWindow extends Component {
               />
               <div />
             </div>
-            <div className="tech-used">
+            {/* <div className="tech-used">
               <h3>tech</h3>
               <div className="tech-used-list">
                 <img height="38px" src={vueLogo} alt="vue framework" />
@@ -52,7 +52,7 @@ class ProjectWindow extends Component {
                 <img height="38px" src={vueLogo} alt="vue framework" />
                 <img height="38px" src={vueLogo} alt="vue framework" />
               </div>
-            </div>
+            </div> */}
           </div>
           <p>
             Running app that plays increasingly intense music the faster you
@@ -116,7 +116,7 @@ class ProjectWindow extends Component {
                   onClick={() => this.chooseProject("tpg")}
                   className={this.state.tpg ? "project active" : "project"}
                 >
-                  Twin Peaks Gazette
+                  TP Gazette
                 </div>
               </div>
 
