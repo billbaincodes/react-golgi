@@ -6,6 +6,11 @@ body {
   background-position-y: 40px;
   font-family: sans-serif;
   cursor: pointer;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
+  -webkit-tap-highlight-color: transparent; 
+}
+
+button { 
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
@@ -204,15 +209,20 @@ iframe {
   text-align: left;
 }
 
+.window-body > h3 {
+  text-decoration: underline;
+}
+
 .window-body > img {
   float: left;
   width: 40%;
-  margin: 10px;
+  margin: 10px 10px 10px 0px;
   border-right: 2px solid rgb(27, 27, 27);
   border-bottom: 2px solid rgb(27, 27, 27);
   border-left: 2px solid rgb(120, 120, 120);
   border-top: 2px solid rgb(120, 120, 120);
 }
+
 
 .close-button {
   background: #c0c0c0;

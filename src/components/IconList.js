@@ -4,14 +4,19 @@ import folder from "../assets/documents.png";
 import myPC from "../assets/mycomputer.png";
 import myst from "../assets/mystIcon.png"
 
-const IconList = () => {
+const IconList = ({aboutWindow}) => {
+
+  let foo = () => {
+    console.log('f00')
+  }
+
   return (
     <div className="icon-list">
-      <div className="icon">
+      <div onClick={foo} className="icon">
         <img src={myPC} alt="my computer" />
         <p>Bill's PC</p>
       </div>
-      <div className="icon">
+      <div  className="icon">
         <img src={recycle} alt="recycling bin" />
         <p>Recycle Bin</p>
       </div>

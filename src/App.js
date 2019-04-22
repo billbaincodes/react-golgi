@@ -33,7 +33,7 @@ class App extends Component {
     return (
       <div>
         <div>
-          <IconList />
+          <IconList aboutWindow={this.aboutWindow} />
           {this.state.projectToggle && <ProjectWindow projectWindow={this.projectWindow} />}
           {this.state.techToggle && <TechWindow techWindow={this.techWindow}/> }
           {this.state.aboutToggle && <AboutWindow aboutWindow={this.aboutWindow}/> }
