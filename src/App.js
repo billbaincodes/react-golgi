@@ -8,6 +8,7 @@ import "./App.css";
 import IconList from "./components/IconList.js"
 
 class App extends Component {
+
   state = {
     menuToggle: false,
     aboutToggle: false,
@@ -40,7 +41,6 @@ class App extends Component {
           {this.state.menuToggle && <StartMenu aboutWindow={this.aboutWindow} techWindow={this.techWindow} projectWindow={this.projectWindow} />}
           
           <Start menuToggle={this.menuToggle}/>
-
         </div>
         
       </div>
