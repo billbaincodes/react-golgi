@@ -9,12 +9,25 @@ import IconList from "./components/IconList.js"
 
 class App extends Component {
 
+  componentDidMount(){
+    this.timeFinder()
+    setInterval(this.timeFinder, 10000)
+  }
+
   state = {
     menuToggle: false,
     aboutToggle: false,
     techToggle: false,
-    projectToggle: true
+    projectToggle: true,
+    currentTime: "11:25"
   };
+
+  timeFinder = () => {
+    let date = new Date()
+    let time = date.getHours() + ":" + date.getMinutes()
+    this.setState({ currentTime : time })
+    console.log('just updated the time')
+  }
 
   menuToggle = () => {
     this.setState({ menuToggle: !this.state.menuToggle });
@@ -30,17 +43,22 @@ class App extends Component {
     this.setState({ projectToggle: toggle, menuToggle: false, aboutToggle: false, techToggle: false });
   }
 
+
+
   render() {
     return (
       <div>
         <div>
+        
           <IconList aboutWindow={this.aboutWindow} />
+          
           {this.state.projectToggle && <ProjectWindow projectWindow={this.projectWindow} />}
           {this.state.techToggle && <TechWindow techWindow={this.techWindow}/> }
           {this.state.aboutToggle && <AboutWindow aboutWindow={this.aboutWindow}/> }
           {this.state.menuToggle && <StartMenu aboutWindow={this.aboutWindow} techWindow={this.techWindow} projectWindow={this.projectWindow} />}
+
+          <Start currentTime={this.state.currentTime} menuToggle={this.menuToggle}/>
           
-          <Start menuToggle={this.menuToggle}/>
         </div>
         
       </div>

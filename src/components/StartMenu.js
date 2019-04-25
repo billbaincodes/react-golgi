@@ -30,9 +30,9 @@ const StartMenu = ({ aboutWindow, techWindow, projectWindow }) => {
         </li>
         <hr />
         <a href="mailto:billbaincodes@gmail.com">
-        <li class="log-off ok">Email Me</li>
+        <li class="log-off menu-button  ">Email Me</li>
         </a>
-        <li class="shut-down ok">Shut Down...</li>
+        <li class="shut-down menu-button-disabled">Shut Down...</li>
       </ul>
     </div>
   );
