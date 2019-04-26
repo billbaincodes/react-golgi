@@ -65,7 +65,7 @@ class App extends Component {
     return (
       <div>
         <div>
-          <IconList aboutWindow={this.aboutWindow} />
+          <IconList projectWindow={this.projectWindow} />
 
           {this.state.projectToggle && (
             <ProjectWindow projectWindow={this.projectWindow} />

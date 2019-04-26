@@ -23,7 +23,7 @@ class AboutWindow extends Component {
         <div className="project-body">
           <div className="project-info">
             <div class="window-body">
-            <h3>Does Bill Bain Code?</h3>
+            <h3>About the Author</h3>
 
               <img
                 src="https://i.imgur.com/K8WF4FM.jpg"
@@ -96,7 +96,6 @@ class AboutWindow extends Component {
                   Site
                 </div>
               </div>
-
               {this.displayProject()}
             </div>
             <div className="window-buttons">

@@ -20,8 +20,8 @@ a {
 }
 
 iframe {
-  width: 80%;
-  height: 300px;
+  width: 83%;
+  height: 260px;
   border-top: 2px solid white;
   border-right: 2px solid #222;
   border-bottom: 2px solid #222;
@@ -41,6 +41,10 @@ iframe {
   display: block;
   text-align: center;
   width: 100px;
+}
+
+.icon:active {
+  border: 1px dashed white;
 }
 
 .icon > p {
@@ -394,7 +398,7 @@ iframe {
 }
 
 .project-subtitle {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .project-data {

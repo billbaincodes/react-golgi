@@ -10,7 +10,7 @@ const StartMenu = ({ aboutWindow, techWindow, projectWindow }) => {
         </div>
       </div>
       <ul>
-        <li class="windows-update">Full Stack Developer</li>
+        <li class="windows-update menu-button">Full Stack Developer</li>
         <hr />
         <li onClick={() => techWindow(true)} class="programs menu-button">
           Tech
