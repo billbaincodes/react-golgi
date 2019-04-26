@@ -1,17 +1,16 @@
 import React, { Component } from "react";
 import Start from "./components/Start";
 import StartMenu from "./components/StartMenu";
-import AboutWindow from "./components/Windows/AboutWindow.js"
-import TechWindow from "./components/Windows/TechWindow.js"
-import ProjectWindow from "./components/Windows/ProjectWindow.js"
+import AboutWindow from "./components/Windows/AboutWindow.js";
+import TechWindow from "./components/Windows/TechWindow.js";
+import ProjectWindow from "./components/Windows/ProjectWindow.js";
 import "./App.css";
-import IconList from "./components/IconList.js"
+import IconList from "./components/IconList.js";
 
 class App extends Component {
-
-  componentDidMount(){
-    this.timeFinder()
-    setInterval(this.timeFinder, 10000)
+  componentDidMount() {
+    this.timeFinder();
+    setInterval(this.timeFinder, 10000);
   }
 
   state = {
@@ -23,44 +22,71 @@ class App extends Component {
   };
 
   timeFinder = () => {
-    let date = new Date()
-    let time = date.getHours() + ":" + date.getMinutes()
-    this.setState({ currentTime : time })
-    console.log('just updated the time')
-  }
+    let date = new Date();
+    let hour = date.getHours();
+    if (hour > 12) {
+      hour -= 12;
+    }
+    let time = hour + ":" + date.getMinutes();
+    this.setState({ currentTime: time });
+    console.log("just updated the time");
+  };
 
   menuToggle = () => {
     this.setState({ menuToggle: !this.state.menuToggle });
   };
 
-  aboutWindow = (toggle) => {
-    this.setState({ aboutToggle: toggle, menuToggle: false, techToggle: false, projectWindow: false });
-  }
-  techWindow = (toggle) => {
-    this.setState({ techToggle: toggle, menuToggle: false, aboutToggle: false, projectWindow: false });
-  }
-  projectWindow = (toggle) => {
-    this.setState({ projectToggle: toggle, menuToggle: false, aboutToggle: false, techToggle: false });
-  }
-
-
+  aboutWindow = toggle => {
+    this.setState({
+      aboutToggle: toggle,
+      menuToggle: false,
+      techToggle: false,
+      projectWindow: false
+    });
+  };
+  techWindow = toggle => {
+    this.setState({
+      techToggle: toggle,
+      menuToggle: false,
+      aboutToggle: false,
+      projectWindow: false
+    });
+  };
+  projectWindow = toggle => {
+    this.setState({
+      projectToggle: toggle,
+      menuToggle: false,
+      aboutToggle: false,
+      techToggle: false
+    });
+  };
 
   render() {
     return (
       <div>
         <div>
-        
           <IconList aboutWindow={this.aboutWindow} />
-          
-          {this.state.projectToggle && <ProjectWindow projectWindow={this.projectWindow} />}
-          {this.state.techToggle && <TechWindow techWindow={this.techWindow}/> }
-          {this.state.aboutToggle && <AboutWindow aboutWindow={this.aboutWindow}/> }
-          {this.state.menuToggle && <StartMenu aboutWindow={this.aboutWindow} techWindow={this.techWindow} projectWindow={this.projectWindow} />}
 
-          <Start currentTime={this.state.currentTime} menuToggle={this.menuToggle}/>
-          
+          {this.state.projectToggle && (
+            <ProjectWindow projectWindow={this.projectWindow} />
+          )}
+          {this.state.techToggle && <TechWindow techWindow={this.techWindow} />}
+          {this.state.aboutToggle && (
+            <AboutWindow aboutWindow={this.aboutWindow} />
+          )}
+          {this.state.menuToggle && (
+            <StartMenu
+              aboutWindow={this.aboutWindow}
+              techWindow={this.techWindow}
+              projectWindow={this.projectWindow}
+            />
+          )}
+
+          <Start
+            currentTime={this.state.currentTime}
+            menuToggle={this.menuToggle}
+          />
         </div>
-        
       </div>
     );
   }
