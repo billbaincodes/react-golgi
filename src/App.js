@@ -17,7 +17,7 @@ class App extends Component {
     menuToggle: false,
     aboutToggle: false,
     techToggle: false,
-    projectToggle: true,
+    projectToggle: false,
     currentTime: "11:25"
   };
 

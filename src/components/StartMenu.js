@@ -1,7 +1,17 @@
 import React from "react";
 import resume from "../assets/billBainResume.pdf"
+import startupSound from "../assets/startupSound.wav"
 
 const StartMenu = ({ aboutWindow, techWindow, projectWindow }) => {
+
+
+  let startUp = () => {
+    var audio = new Audio(startupSound);
+    audio.play();
+  }
+
+
+
   return (
     <div class="start-menu">
       <div class="title-container">
@@ -10,7 +20,7 @@ const StartMenu = ({ aboutWindow, techWindow, projectWindow }) => {
         </div>
       </div>
       <ul>
-        <li class="windows-update menu-button">Full Stack Developer</li>
+        <li class="windows-update menu-button" onClick={startUp}>Full Stack Developer</li>
         <hr />
         <li onClick={() => techWindow(true)} class="programs menu-button">
           Tech

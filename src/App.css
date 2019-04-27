@@ -31,10 +31,12 @@ iframe {
 .icon-list{
   display: flex;
   align-items: flex-start;
+  height: 90%;
   flex-direction: column;
   margin-left: 20px;
   margin-top: 20px;
   position: absolute;
+  flex-wrap: wrap;
   z-index: -1;
 }
 .icon {
