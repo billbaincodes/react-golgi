@@ -76,6 +76,7 @@ class App extends Component {
           )}
           {this.state.menuToggle && (
             <StartMenu
+              menuToggle={this.menuToggle}
               aboutWindow={this.aboutWindow}
               techWindow={this.techWindow}
               projectWindow={this.projectWindow}

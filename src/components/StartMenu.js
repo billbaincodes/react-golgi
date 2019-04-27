@@ -2,12 +2,13 @@ import React from "react";
 import resume from "../assets/billBainResume.pdf"
 import startupSound from "../assets/startupSound.wav"
 
-const StartMenu = ({ aboutWindow, techWindow, projectWindow }) => {
+const StartMenu = ({ menuToggle, aboutWindow, techWindow, projectWindow }) => {
 
 
   let startUp = () => {
     var audio = new Audio(startupSound);
     audio.play();
+    menuToggle()
   }
 
 

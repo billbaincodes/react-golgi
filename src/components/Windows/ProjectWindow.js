@@ -8,7 +8,7 @@ const ProjectWindow = ({ projectWindow }) => {
     <div class="window-container">
       <div class="window">
         <div class="window-title">
-          <div>flô</div>
+          <div>Music/Fitness Android App</div>
           <div class="close-button" onClick={() => projectWindow(false)}>
             X
           </div>
@@ -16,8 +16,8 @@ const ProjectWindow = ({ projectWindow }) => {
 
         <div class="window-body">
           <div className="project-title">
-            flô -
-            <span className="project-subtitle"> Music/Fitness Android App</span>
+            flô
+            {/* <span className="project-subtitle"> Music/Fitness Android App</span> */}
           </div>
           <p>
             flô is a running app that plays increasingly intense music the
