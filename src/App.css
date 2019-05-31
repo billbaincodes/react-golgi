@@ -400,6 +400,14 @@ iframe {
   align-content: center;
 }
 
+.mini-project {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  font-size: 1.2rem;
+  font-size: 2rem;
+}
+
 
 .project-title {
   font-size: 2rem;
