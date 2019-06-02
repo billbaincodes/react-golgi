@@ -14,36 +14,36 @@ const StartMenu = ({ menuToggle, aboutWindow, techWindow, projectWindow }) => {
 
 
   return (
-    <div class="start-menu">
-      <div class="title-container">
-        <div class="title">
+    <div className="start-menu">
+      <div className="title-container">
+        <div className="title">
           BillBainCodes<span>98</span>
         </div>
       </div>
       <ul>
-        <li class="windows-update menu-button" onClick={startUp}>Full Stack Developer</li>
+        <li className="windows-update menu-button" onClick={startUp}>Full Stack Developer</li>
         <hr />
-        <li onClick={() => techWindow(true)} class="programs menu-button">
+        <li onClick={() => techWindow(true)} className="programs menu-button">
           Tech
         </li>
-        <li onClick={() => projectWindow(true)} class="favorites menu-button">Projects</li>
+        <li onClick={() => projectWindow(true)} className="favorites menu-button">Projects</li>
         <a href={resume} target="blank">
-        <li class="documents menu-button">Resume</li>
+        <li className="documents menu-button">Resume</li>
         </a>
         <a href="https://github.com/billbaincodes" target="blank">
-          <li class="settings menu-button"> GitHub </li>
+          <li className="settings menu-button"> GitHub </li>
         </a>
         <a href="https://www.linkedin.com/in/billbaincodes/" target="blank">
-          <li class="find menu-button"> LinkedIn </li>
+          <li className="find menu-button"> LinkedIn </li>
         </a>
-        <li onClick={() => aboutWindow(true)} class="help menu-button">
+        <li onClick={() => aboutWindow(true)} className="help menu-button">
           About
         </li>
         <hr />
         <a href="mailto:billbaincodes@gmail.com">
-        <li class="log-off menu-button  ">Email Me</li>
+        <li className="log-off menu-button  ">Email Me</li>
         </a>
-        <li class="shut-down menu-button-disabled">Shut Down...</li>
+        <li className="shut-down menu-button-disabled">Shut Down...</li>
       </ul>
     </div>
   );

@@ -27,9 +27,10 @@ class App extends Component {
     if (hour > 12) {
       hour -= 12;
     }
-    let time = hour + ":" + date.getMinutes();
+    let minute = (date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes() )
+    let time = hour + ":" + minute
     this.setState({ currentTime: time });
-    console.log("just updated the time");
+    console.log("just updated the time", time);
   };
 
   menuToggle = () => {
@@ -63,7 +64,6 @@ class App extends Component {
 
   render() {
     return (
-      <div>
         <div>
           <IconList projectWindow={this.projectWindow} />
 
@@ -88,7 +88,6 @@ class App extends Component {
             menuToggle={this.menuToggle}
           />
         </div>
-      </div>
     );
   }
 }
