@@ -11,6 +11,7 @@ class App extends Component {
   componentDidMount() {
     this.timeFinder();
     setInterval(this.timeFinder, 10000);
+    console.log('Thanks for stoppin\' on by! \n - Bill')
   }
 
   state = {
@@ -30,7 +31,6 @@ class App extends Component {
     let minute = (date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes() )
     let time = hour + ":" + minute
     this.setState({ currentTime: time });
-    console.log("just updated the time", time);
   };
 
   menuToggle = () => {

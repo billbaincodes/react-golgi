@@ -5,13 +5,9 @@ import myPC from "../assets/mycomputer.png";
 
 const IconList = ({ projectWindow }) => {
 
-  let foo = () => {
-    console.log('f00')
-  }
-
   return (
     <div className="icon-list">
-      <div onClick={foo} className="icon">
+      <div className="icon">
         <img src={myPC} alt="my computer" />
         <p>Bill's PC</p>
       </div>
@@ -22,18 +18,6 @@ const IconList = ({ projectWindow }) => {
       <div onClick={() => projectWindow(true)} className="icon">
         <img src={folder} alt="folder" />
         <p>flô</p>
-      </div>
-      <div onClick={() => projectWindow(true)} className="icon">
-        <img src={folder} alt="folder" />
-        <p>The Joy of Hiking</p>
-      </div>
-      <div onClick={() => projectWindow(true)} className="icon">
-        <img src={folder} alt="folder" />
-        <p>Twin Peaks Gazette</p>
-      </div>
-      <div onClick={() => projectWindow(true)} className="icon">
-        <img src={folder} alt="folder" />
-        <p>Mind Reader</p>
       </div>
     </div>
   );
