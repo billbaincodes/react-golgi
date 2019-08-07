@@ -30,6 +30,7 @@ const ProjectWindow = ({ projectWindow }) => {
           </p>
           <div className="project-data">
             <iframe
+              title="project-video"
               src="https://www.youtube-nocookie.com/embed/0B5-3Z14w04"
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"

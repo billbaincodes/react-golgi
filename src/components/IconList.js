@@ -2,6 +2,7 @@ import React from "react";
 import recycle from "../assets/recylcebin.gif";
 import folder from "../assets/documents.png";
 import myPC from "../assets/mycomputer.png";
+import aim from "../assets/aim-icon.png"
 
 const IconList = ({ projectWindow }) => {
 
@@ -18,6 +19,10 @@ const IconList = ({ projectWindow }) => {
       <div onClick={() => projectWindow(true)} className="icon">
         <img src={folder} alt="folder" />
         <p>flô</p>
+      </div>
+      <div  className="icon">
+        <img src={aim} alt="aim" />
+        <p>AIM</p>
       </div>
     </div>
   );

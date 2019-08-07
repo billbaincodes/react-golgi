@@ -46,8 +46,8 @@ iframe {
 }
 
 .icon:active {
-  /* border: 1px dashed white; */
-  background-color: rgba(49, 49, 49, 0.5);
+  /* border: 1px dashed rgba(133, 133, 133, 0.486); */
+  background-color: rgba(80, 80, 80, 0.24);
 }
 
 .icon > p {
