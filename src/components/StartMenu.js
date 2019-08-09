@@ -4,14 +4,11 @@ import startupSound from "../assets/startupSound.wav"
 
 const StartMenu = ({ menuToggle, aboutWindow, techWindow, projectWindow }) => {
 
-
   let startUp = () => {
     var audio = new Audio(startupSound);
     audio.play();
     menuToggle()
   }
-
-
 
   return (
     <div className="start-menu">
@@ -27,7 +24,7 @@ const StartMenu = ({ menuToggle, aboutWindow, techWindow, projectWindow }) => {
           Tech
         </li>
         <li onClick={() => projectWindow(true)} className="favorites menu-button">Projects</li>
-        <a href={resume} target="blank">
+        <a href="https://drive.google.com/file/d/1bsZHZUJWEelWoUfttQz2EosPuKeLXN2r/view?usp=sharing" target="blank">
         <li className="documents menu-button">Resume</li>
         </a>
         <a href="https://github.com/billbaincodes" target="blank">
