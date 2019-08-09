@@ -1,7 +1,4 @@
-import React, { Component } from "react";
-import bootstrapLogo from "../../assets/tech/Bootstrap-Logo.png";
-import reactLogo from "../../assets/tech/React-Logo.png";
-import vueLogo from "../../assets/tech/58482acecef1014c0b5e4a1e.png";
+import React from "react";
 
 const ProjectWindow = ({ projectWindow }) => {
   return (

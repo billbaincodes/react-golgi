@@ -8,10 +8,20 @@ import "./App.css";
 import IconList from "./components/IconList.js";
 
 class App extends Component {
+
+  styles = [
+    'background: linear-gradient(#000184, #fffff3)'
+    , 'border: 1px solid #000184'
+    , 'color: white'
+    , 'text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3)'
+    , 'line-height: 30px'
+].join(';');
+
+
   componentDidMount() {
     this.timeFinder();
     setInterval(this.timeFinder, 10000);
-    console.log('Thanks for stoppin\' on by! \n - Bill')
+    console.log('%c Thanks for stoppin\' on by! - Bill ', this.styles);
   }
 
   state = {

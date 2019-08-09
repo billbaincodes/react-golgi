@@ -4,12 +4,9 @@ import reactLogo from "../../assets/tech/React-Logo.png";
 import vueLogo from "../../assets/tech/58482acecef1014c0b5e4a1e.png"
 import jsLogo from "../../assets/tech/JavaScript-Logo.jpg"
 import restLogo from "../../assets/tech/RestAPI-Logo.png"
-import gitLogo from "../../assets/tech/Git-Logo.png"
 import nodeLogo from "../../assets/tech/NodeJS-Logo.png"
 import pgLogo  from "../../assets/tech/PostgreSQL-Logo.png"
 import knexLogo  from "../../assets/tech/KnexJS-Logo.png"
-import htmlLogo  from "../../assets/tech/HTML5-Logo.png"
-import cssLogo  from "../../assets/tech/CSS3-Logo.png"
 
 
 const TechWindow = ({ techWindow }) => {
