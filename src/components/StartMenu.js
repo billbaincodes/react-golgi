@@ -1,5 +1,4 @@
 import React from "react";
-import resume from "../assets/billBainResume.pdf"
 import startupSound from "../assets/startupSound.wav"
 
 const StartMenu = ({ menuToggle, aboutWindow, techWindow, projectWindow }) => {

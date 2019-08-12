@@ -11,16 +11,16 @@ import knexLogo  from "../../assets/tech/KnexJS-Logo.png"
 
 const TechWindow = ({ techWindow }) => {
   return (
-    <div class="window-container">
-      <div class="window">
-        <div class="window-title">
+    <div className="window-container">
+      <div className="window">
+        <div className="window-title">
           <div>Tools & Technologies</div>
-          <div class="close-button" onClick={() => techWindow(false)}>
+          <div className="close-button" onClick={() => techWindow(false)}>
             X
           </div>
         </div>
 
-        <div class="window-body">
+        <div className="window-body">
           <h3 className="window-headline">Front End</h3>
           <div className="tech-list">
             <div className="tech-icon">
@@ -46,7 +46,7 @@ const TechWindow = ({ techWindow }) => {
           </div>
         </div>
 
-        <div class="window-body">
+        <div className="window-body">
           <h3 className="window-headline">Back End</h3>
           <div className="tech-list">
           <div className="tech-icon">
