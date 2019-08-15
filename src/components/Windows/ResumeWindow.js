@@ -11,7 +11,6 @@ const ResumeWindow = ({ resumeWindow }) => {
             X
           </div>
         </div>
-          <iframe src={resume} />
           
           <div className="window-buttons">
             <div onClick={() => resumeWindow(false)}>OK</div>

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Start from "./components/Start";
 import StartMenu from "./components/StartMenu";
+import Window from "./components/Windows/Window"
 import AboutWindow from "./components/Windows/AboutWindow.js";
 import TechWindow from "./components/Windows/TechWindow.js";
 import ProjectWindow from "./components/Windows/ProjectWindow.js";
@@ -29,6 +30,7 @@ class App extends Component {
     aboutToggle: false,
     techToggle: false,
     projectToggle: false,
+    windowToggle: true,
     currentTime: "11:25"
   };
 
@@ -76,14 +78,10 @@ class App extends Component {
     return (
         <div>
           <IconList projectWindow={this.projectWindow} />
-
-          {this.state.projectToggle && (
-            <ProjectWindow projectWindow={this.projectWindow} />
-          )}
+          {this.state.projectToggle && (<ProjectWindow projectWindow={this.projectWindow} />)}
           {this.state.techToggle && <TechWindow techWindow={this.techWindow} />}
-          {this.state.aboutToggle && (
-            <AboutWindow aboutWindow={this.aboutWindow} />
-          )}
+          {this.state.aboutToggle && (<AboutWindow aboutWindow={this.aboutWindow} />)}
+          {this.state.windowToggle && <Window />}
           {this.state.menuToggle && (
             <StartMenu
               menuToggle={this.menuToggle}
@@ -92,7 +90,6 @@ class App extends Component {
               projectWindow={this.projectWindow}
             />
           )}
-
           <Start
             currentTime={this.state.currentTime}
             menuToggle={this.menuToggle}

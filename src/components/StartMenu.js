@@ -37,7 +37,7 @@ const StartMenu = ({ menuToggle, aboutWindow, techWindow, projectWindow }) => {
         </li>
         <hr />
         <a href="mailto:billbaincodes@gmail.com">
-        <li className="log-off menu-button  ">Email Me</li>
+        <li className="log-off menu-button">Email Me</li>
         </a>
         <li className="shut-down menu-button-disabled">Shut Down...</li>
       </ul>
