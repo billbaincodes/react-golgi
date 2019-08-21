@@ -4,6 +4,7 @@ import folder from "../assets/documents.png";
 import myPC from "../assets/mycomputer.png";
 import aim from "../assets/aim-icon.png"
 import myst from "../assets/mystIcon.png"
+import winamp from "../assets/winamp-icon.png"
 
 const IconList = ({ projectWindow }) => {
 
@@ -31,6 +32,10 @@ const IconList = ({ projectWindow }) => {
         <p>Myst</p>
       </div>
       </a>
+      <div className="icon">
+        <img src={winamp} alt="winamp" />
+        <p>Winamp</p>
+      </div>
     </div>
   );
 };
