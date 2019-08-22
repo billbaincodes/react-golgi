@@ -228,6 +228,12 @@ iframe {
   text-align: left;
 }
 
+.custom-window-body {
+  padding: 0px 5px 0px 0px;
+  font-size: 14px;
+  text-align: left;
+}
+
 .window-body > h3 {
   text-decoration: underline;
 }

@@ -11,7 +11,7 @@ const Window = () => {
           </div>
         </div>
 
-        <div className="window-body">
+        <div className="custom-window-body">
             <iframe
               className="custom-iframe"
               title="project-video"

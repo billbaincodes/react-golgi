@@ -26,12 +26,10 @@ const IconList = ({ projectWindow }) => {
         <img src={aim} alt="aim" />
         <p>AIM</p>
       </div>
-      <a target="blank" href="https://www.youtube.com/watch?v=D30r0iRH73Q">
       <div className="icon">
         <img src={myst} alt="myst" />
         <p>Myst</p>
       </div>
-      </a>
       <div className="icon">
         <img src={winamp} alt="winamp" />
         <p>Winamp</p>
