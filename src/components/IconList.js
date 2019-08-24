@@ -5,8 +5,14 @@ import myPC from "../assets/mycomputer.png";
 import aim from "../assets/aim-icon.png"
 import myst from "../assets/mystIcon.png"
 import winamp from "../assets/winamp-icon.png"
+import walkTheLine from "../assets/johnny-cash.m4a"
 
 const IconList = ({ projectWindow }) => {
+
+  let winampPlayer = () => {
+    var audio = new Audio(walkTheLine);
+    audio.play();
+  }
 
   return (
     <div className="icon-list">
@@ -30,7 +36,7 @@ const IconList = ({ projectWindow }) => {
         <img src={myst} alt="myst" />
         <p>Myst</p>
       </div>
-      <div className="icon">
+      <div onClick={winampPlayer} className="icon">
         <img src={winamp} alt="winamp" />
         <p>Winamp</p>
       </div>
