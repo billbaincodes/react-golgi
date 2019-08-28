@@ -14,6 +14,11 @@ const IconList = ({ projectWindow }) => {
     audio.play();
   }
 
+  let aimPlayer = () => {
+    var audio = new Audio();
+    audio.play();
+  }
+
   return (
     <div className="icon-list">
       <div className="icon">
@@ -29,7 +34,7 @@ const IconList = ({ projectWindow }) => {
         <p>flô</p>
       </div>
       <div className="icon">
-        <img src={aim} alt="aim" />
+        <img onClick={aimPlayer} src={aim} alt="aim" />
         <p>AIM</p>
       </div>
       <div className="icon">
