@@ -6,6 +6,7 @@ import aim from "../assets/aim-icon.png"
 import myst from "../assets/mystIcon.png"
 import winamp from "../assets/winamp-icon.png"
 import walkTheLine from "../assets/johnny-cash.m4a"
+import aimAlert from "../assets/aim-alert.mp4"
 
 const IconList = ({ projectWindow }) => {
 
@@ -15,7 +16,7 @@ const IconList = ({ projectWindow }) => {
   }
 
   let aimPlayer = () => {
-    var audio = new Audio();
+    var audio = new Audio(aimAlert);
     audio.play();
   }
 
