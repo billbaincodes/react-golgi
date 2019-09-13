@@ -89,11 +89,11 @@ class App extends Component {
   render() {
     return (
         <div>
-          <IconList projectWindow={this.projectWindow} />
+          <IconList projectWindow={this.projectWindow} videoWindow={this.videoWindow} />
           {this.state.projectToggle && <ProjectWindow projectWindow={this.projectWindow} />}
           {this.state.techToggle && <TechWindow techWindow={this.techWindow} />}
           {this.state.aboutToggle && <AboutWindow aboutWindow={this.aboutWindow} />}
-          {this.state.videoToggle && <VideoWindow title='Myst' video='https://www.youtube.com/embed/D30r0iRH73Q?controls=0&amp;start=96' />}
+          {this.state.videoToggle && <VideoWindow title='Myst' video='https://www.youtube.com/embed/D30r0iRH73Q?controls=0&amp;start=96' videoWindow={this.videoWindow}/>}
           {this.state.menuToggle && (
             <StartMenu
               menuToggle={this.menuToggle}
