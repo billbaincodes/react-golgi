@@ -1,11 +1,11 @@
 import React from "react";
 
-const Window = () => {
+const Window = ({title, video}) => {
   return (
     <div className="window-container">
       <div className="window">
         <div className="window-title">
-          <div>Myst</div>
+          <div>{title}</div>
           <div className="close-button" onClick={() => (false)}>
             X
           </div>
@@ -15,7 +15,7 @@ const Window = () => {
             <iframe
               className="custom-iframe"
               title="project-video"
-              src="https://www.youtube.com/embed/D30r0iRH73Q?controls=0&amp;start=96"
+              src={video}
               frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen

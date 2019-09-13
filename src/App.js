@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Start from "./components/Start";
 import StartMenu from "./components/StartMenu";
-import Window from "./components/Windows/Window"
+import VideoWindow from "./components/Windows/VideoWindow"
 import AboutWindow from "./components/Windows/AboutWindow.js";
 import TechWindow from "./components/Windows/TechWindow.js";
 import ProjectWindow from "./components/Windows/ProjectWindow.js";
@@ -30,7 +30,7 @@ class App extends Component {
     aboutToggle: false,
     techToggle: false,
     projectToggle: false,
-    windowToggle: true,
+    windowToggle: false,
     currentTime: "11:25"
   };
 
@@ -54,7 +54,8 @@ class App extends Component {
       aboutToggle: toggle,
       menuToggle: false,
       techToggle: false,
-      projectWindow: false
+      projectWindow: false,
+      videoToggle: false,
     });
   };
   techWindow = toggle => {
@@ -62,7 +63,8 @@ class App extends Component {
       techToggle: toggle,
       menuToggle: false,
       aboutToggle: false,
-      projectWindow: false
+      projectWindow: false,
+      videoToggle: false,
     });
   };
   projectWindow = toggle => {
@@ -70,18 +72,28 @@ class App extends Component {
       projectToggle: toggle,
       menuToggle: false,
       aboutToggle: false,
-      techToggle: false
+      techToggle: false,
+      videoToggle: false,
     });
   };
+  videoWindow = toggle => {
+    this.setState({
+      videoToggle: toggle,
+      projectToggle: false,
+      menuToggle: false,
+      aboutToggle: false,
+      techToggle: false,
+    });
+  }
 
   render() {
     return (
         <div>
           <IconList projectWindow={this.projectWindow} />
-          {this.state.projectToggle && (<ProjectWindow projectWindow={this.projectWindow} />)}
+          {this.state.projectToggle && <ProjectWindow projectWindow={this.projectWindow} />}
           {this.state.techToggle && <TechWindow techWindow={this.techWindow} />}
-          {this.state.aboutToggle && (<AboutWindow aboutWindow={this.aboutWindow} />)}
-          {this.state.windowToggle && <Window />}
+          {this.state.aboutToggle && <AboutWindow aboutWindow={this.aboutWindow} />}
+          {this.state.videoToggle && <VideoWindow title='Myst' video='https://www.youtube.com/embed/D30r0iRH73Q?controls=0&amp;start=96' />}
           {this.state.menuToggle && (
             <StartMenu
               menuToggle={this.menuToggle}
