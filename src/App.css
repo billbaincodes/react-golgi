@@ -46,8 +46,8 @@ iframe {
 }
 
 .icon:active {
-  /* border: 1px dashed white; */
-  background-color: rgba(49, 49, 49, 0.5);
+  /* border: 1px dashed rgba(133, 133, 133, 0.486); border moves box!!! */
+  background-color: rgba(80, 80, 80, 0.24);
 }
 
 .icon > p {
@@ -226,7 +226,12 @@ iframe {
   padding: 10px 10px 10px 10px;
   font-size: 14px;
   text-align: left;
+}
 
+.custom-window-body {
+  padding: 0px 5px 0px 0px;
+  font-size: 14px;
+  text-align: left;
 }
 
 .window-body > h3 {
@@ -262,6 +267,10 @@ iframe {
   border-right: rgb(255, 255, 255) 2px solid;
   border-bottom: rgb(255, 255, 255) 2px solid;
 
+}
+
+.custom-iframe {
+  width:100%;
 }
 
 .window-headline {
@@ -467,6 +476,7 @@ h1 {
 h3 {
   margin: 0;
 }
+
 
 .start-menu ul li.programs {
   background-image: url(https://66.media.tumblr.com/49ed6c0ebac47753e08e85c230d97d03/tumblr_odqaag4zd41vgs7gco2_75sq.png);

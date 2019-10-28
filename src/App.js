@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Start from "./components/Start";
 import StartMenu from "./components/StartMenu";
+import VideoWindow from "./components/Windows/VideoWindow"
 import AboutWindow from "./components/Windows/AboutWindow.js";
 import TechWindow from "./components/Windows/TechWindow.js";
 import ProjectWindow from "./components/Windows/ProjectWindow.js";
@@ -8,9 +9,20 @@ import "./App.css";
 import IconList from "./components/IconList.js";
 
 class App extends Component {
+
+  styles = [
+    'background: linear-gradient(#000184, #fffff3)'
+    , 'border: 1px solid #000184'
+    , 'color: white'
+    , 'text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3)'
+    , 'line-height: 30px'
+].join(';');
+
+
   componentDidMount() {
     this.timeFinder();
     setInterval(this.timeFinder, 10000);
+    console.log('%c Thanks for stoppin\' on by! - Bill ', this.styles);
   }
 
   state = {
@@ -18,6 +30,7 @@ class App extends Component {
     aboutToggle: false,
     techToggle: false,
     projectToggle: false,
+    windowToggle: false,
     currentTime: "11:25"
   };
 
@@ -30,7 +43,6 @@ class App extends Component {
     let minute = (date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes() )
     let time = hour + ":" + minute
     this.setState({ currentTime: time });
-    console.log("just updated the time", time);
   };
 
   menuToggle = () => {
@@ -42,7 +54,8 @@ class App extends Component {
       aboutToggle: toggle,
       menuToggle: false,
       techToggle: false,
-      projectWindow: false
+      projectWindow: false,
+      videoToggle: false,
     });
   };
   techWindow = toggle => {
@@ -50,7 +63,8 @@ class App extends Component {
       techToggle: toggle,
       menuToggle: false,
       aboutToggle: false,
-      projectWindow: false
+      projectWindow: false,
+      videoToggle: false,
     });
   };
   projectWindow = toggle => {
@@ -58,22 +72,28 @@ class App extends Component {
       projectToggle: toggle,
       menuToggle: false,
       aboutToggle: false,
-      techToggle: false
+      techToggle: false,
+      videoToggle: false,
     });
   };
+  videoWindow = toggle => {
+    this.setState({
+      videoToggle: toggle,
+      projectToggle: false,
+      menuToggle: false,
+      aboutToggle: false,
+      techToggle: false,
+    });
+  }
 
   render() {
     return (
         <div>
-          <IconList projectWindow={this.projectWindow} />
-
-          {this.state.projectToggle && (
-            <ProjectWindow projectWindow={this.projectWindow} />
-          )}
+          <IconList projectWindow={this.projectWindow} videoWindow={this.videoWindow} />
+          {this.state.projectToggle && <ProjectWindow projectWindow={this.projectWindow} />}
           {this.state.techToggle && <TechWindow techWindow={this.techWindow} />}
-          {this.state.aboutToggle && (
-            <AboutWindow aboutWindow={this.aboutWindow} />
-          )}
+          {this.state.aboutToggle && <AboutWindow aboutWindow={this.aboutWindow} />}
+          {this.state.videoToggle && <VideoWindow title='Myst' video='https://www.youtube.com/embed/D30r0iRH73Q?controls=0&amp;start=96' videoWindow={this.videoWindow}/>}
           {this.state.menuToggle && (
             <StartMenu
               menuToggle={this.menuToggle}
@@ -82,7 +102,6 @@ class App extends Component {
               projectWindow={this.projectWindow}
             />
           )}
-
           <Start
             currentTime={this.state.currentTime}
             menuToggle={this.menuToggle}

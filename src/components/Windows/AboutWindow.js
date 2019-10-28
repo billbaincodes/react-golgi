@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import reactLogo from "../../assets/tech/React-Logo.png";
 
-
 class AboutWindow extends Component {
   constructor() {
     super();
@@ -22,8 +21,8 @@ class AboutWindow extends Component {
       return (
         <div className="project-body">
           <div className="project-info">
-            <div class="window-body">
-            <h3>About the Author</h3>
+            <div className="window-body">
+              <h3>About the Author</h3>
 
               <img
                 src="https://i.imgur.com/K8WF4FM.jpg"
@@ -39,9 +38,10 @@ class AboutWindow extends Component {
                 development.
               </p>
               <p>
-                &nbsp;&nbsp;&nbsp; I teach web development part time at
-                University of Denver's Bootcamp and am actively pursuing a full
-                time position. If you're interested, please click this link to <a href="mailto:billbaincodes@gmail.com">email me</a>!
+                &nbsp;&nbsp;&nbsp; If you have any questions about the site,
+                ideas you want to collaborate on, or crunchy Phish jams you need
+                to discuss, don't hesitate to reach out! Thanks for stoppin' on
+                by - Bill
               </p>
             </div>
           </div>
@@ -53,12 +53,14 @@ class AboutWindow extends Component {
           <div className="project-info">
             <div className="window-body">
               <h3>What's Old is New</h3>
-              <img
-                src={reactLogo}
-                alt="react logo"
-              />
+              <img src={reactLogo} alt="react logo" />
               <p>
-                &nbsp;&nbsp;&nbsp; This site is designed to appear and behave much like Windows 98 used to. The folders on the 'desktop' are my projects, click each one for more information. Use the 'Start Menu' to navigate to other parts of the site like my skills, contact info etc. Despite the classic look, this site is built with React.js!
+                &nbsp;&nbsp;&nbsp; This site is designed to appear and behave
+                much like Windows 98 used to. The folders on the 'desktop' are
+                my projects, click each one for more information. Use the 'Start
+                Menu' to navigate to other parts of the site like my skills,
+                contact info etc. Despite the classic look, this site is built
+                with React.js!
               </p>
             </div>
           </div>
@@ -69,18 +71,18 @@ class AboutWindow extends Component {
 
   render() {
     return (
-      <div class="window-container">
-        <div class="window">
-          <div class="window-title">
+      <div className="window-container">
+        <div className="window">
+          <div className="window-title">
             <div>About</div>
             <div
-              class="close-button"
+              className="close-button"
               onClick={() => this.props.aboutWindow(false)}
             >
               X
             </div>
           </div>
-          <div class="window-body">
+          <div className="window-body">
             <div className="project-menu">
               <div className="project-header">
                 <div

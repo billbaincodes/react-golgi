@@ -4,26 +4,23 @@ import reactLogo from "../../assets/tech/React-Logo.png";
 import vueLogo from "../../assets/tech/58482acecef1014c0b5e4a1e.png"
 import jsLogo from "../../assets/tech/JavaScript-Logo.jpg"
 import restLogo from "../../assets/tech/RestAPI-Logo.png"
-import gitLogo from "../../assets/tech/Git-Logo.png"
 import nodeLogo from "../../assets/tech/NodeJS-Logo.png"
 import pgLogo  from "../../assets/tech/PostgreSQL-Logo.png"
 import knexLogo  from "../../assets/tech/KnexJS-Logo.png"
-import htmlLogo  from "../../assets/tech/HTML5-Logo.png"
-import cssLogo  from "../../assets/tech/CSS3-Logo.png"
 
 
 const TechWindow = ({ techWindow }) => {
   return (
-    <div class="window-container">
-      <div class="window">
-        <div class="window-title">
+    <div className="window-container">
+      <div className="window">
+        <div className="window-title">
           <div>Tools & Technologies</div>
-          <div class="close-button" onClick={() => techWindow(false)}>
+          <div className="close-button" onClick={() => techWindow(false)}>
             X
           </div>
         </div>
 
-        <div class="window-body">
+        <div className="window-body">
           <h3 className="window-headline">Front End</h3>
           <div className="tech-list">
             <div className="tech-icon">
@@ -49,7 +46,7 @@ const TechWindow = ({ techWindow }) => {
           </div>
         </div>
 
-        <div class="window-body">
+        <div className="window-body">
           <h3 className="window-headline">Back End</h3>
           <div className="tech-list">
           <div className="tech-icon">

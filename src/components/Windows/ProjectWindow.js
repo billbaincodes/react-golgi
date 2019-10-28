@@ -1,20 +1,17 @@
-import React, { Component } from "react";
-import bootstrapLogo from "../../assets/tech/Bootstrap-Logo.png";
-import reactLogo from "../../assets/tech/React-Logo.png";
-import vueLogo from "../../assets/tech/58482acecef1014c0b5e4a1e.png";
+import React from "react";
 
 const ProjectWindow = ({ projectWindow }) => {
   return (
-    <div class="window-container">
-      <div class="window">
-        <div class="window-title">
+    <div className="window-container">
+      <div className="window">
+        <div className="window-title">
           <div>Music/Fitness Android App</div>
-          <div class="close-button" onClick={() => projectWindow(false)}>
+          <div className="close-button" onClick={() => projectWindow(false)}>
             X
           </div>
         </div>
 
-        <div class="window-body">
+        <div className="window-body">
           <div className="project-title">
             flô
             {/* <span className="project-subtitle"> Music/Fitness Android App</span> */}
@@ -30,10 +27,11 @@ const ProjectWindow = ({ projectWindow }) => {
           </p>
           <div className="project-data">
             <iframe
+              title="project-video"
               src="https://www.youtube-nocookie.com/embed/0B5-3Z14w04"
-              frameborder="0"
+              frameBorder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-              allowfullscreen
+              allowFullScreen
             />
             <div />
           </div>

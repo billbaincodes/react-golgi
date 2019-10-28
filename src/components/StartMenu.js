@@ -1,17 +1,13 @@
 import React from "react";
-import resume from "../assets/billBainResume.pdf"
 import startupSound from "../assets/startupSound.wav"
 
 const StartMenu = ({ menuToggle, aboutWindow, techWindow, projectWindow }) => {
-
 
   let startUp = () => {
     var audio = new Audio(startupSound);
     audio.play();
     menuToggle()
   }
-
-
 
   return (
     <div className="start-menu">
@@ -27,7 +23,7 @@ const StartMenu = ({ menuToggle, aboutWindow, techWindow, projectWindow }) => {
           Tech
         </li>
         <li onClick={() => projectWindow(true)} className="favorites menu-button">Projects</li>
-        <a href={resume} target="blank">
+        <a href="https://drive.google.com/file/d/14wBJU2BaEvWAcMt3MkwI7bqjRCjYY4hK/view?usp=sharing" target="blank">
         <li className="documents menu-button">Resume</li>
         </a>
         <a href="https://github.com/billbaincodes" target="blank">
@@ -41,7 +37,7 @@ const StartMenu = ({ menuToggle, aboutWindow, techWindow, projectWindow }) => {
         </li>
         <hr />
         <a href="mailto:billbaincodes@gmail.com">
-        <li className="log-off menu-button  ">Email Me</li>
+        <li className="log-off menu-button">Email Me</li>
         </a>
         <li className="shut-down menu-button-disabled">Shut Down...</li>
       </ul>
