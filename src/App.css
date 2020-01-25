@@ -317,7 +317,7 @@ iframe {
   background-position: 5px center;
 }
 
-.tech-list{
+.tech-list {
   display: flex;
   background-color: white;
   justify-content: space-evenly;
@@ -336,6 +336,7 @@ iframe {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   margin: 5px;
   border-top: 1px solid rgb(200, 200, 200);
   border-left: 1px solid rgb(200, 200, 200);
@@ -355,8 +356,13 @@ iframe {
 
 .tech-icon > img {
   text-align: center;
-  width: 48px;
-  height: 48px;
+  /* width: 48px; */
+  height: 64%;
+}
+
+.tech-icon > p {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 .tech > p {
