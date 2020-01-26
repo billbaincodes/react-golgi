@@ -546,7 +546,7 @@ h3 {
   }
 
   .tech-icon{
-    flex-direction: row;
+    flex-direction: row-reverse;
     font-size: 12px;
     height: 20px;
     width: 90%;
@@ -566,6 +566,10 @@ h3 {
     text-align: center;
     height: 100%;
     width: auto;
+  }
+
+  .tech-icon > p {
+    margin-right: .1rem;
   }
 
 }

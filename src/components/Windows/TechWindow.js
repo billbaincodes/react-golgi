@@ -1,13 +1,15 @@
 import React from "react";
-import bootstrapLogo from "../../assets/tech/Bootstrap-Logo.png";
+
 import reactLogo from "../../assets/tech/React-Logo.png";
-import vueLogo from "../../assets/tech/58482acecef1014c0b5e4a1e.png"
-import jsLogo from "../../assets/tech/JavaScript-Logo.jpg"
-import restLogo from "../../assets/tech/RestAPI-Logo.png"
+import angularLogo from "../../assets/tech/angularLogo.svg"
+import tsLogo from "../../assets/tech/tsLogo.png"
 import nodeLogo from "../../assets/tech/NodeJS-Logo.png"
 import pgLogo  from "../../assets/tech/PostgreSQL-Logo.png"
 import knexLogo  from "../../assets/tech/KnexJS-Logo.png"
-
+import awsLogo from '../../assets/tech/AWSlogo.png'
+import sassLogo from '../../assets/tech/sassLogo.png'
+import gitLogo from '../../assets/tech/gitLogo.png'
+import vuenLogo from '../../assets/tech/vuenLogo.png'
 
 const TechWindow = ({ techWindow }) => {
   return (
@@ -23,52 +25,72 @@ const TechWindow = ({ techWindow }) => {
         <div className="window-body">
           <h3 className="window-headline">Front End</h3>
           <div className="tech-list">
-            <div className="tech-icon">
-              <img src={jsLogo} alt="bootstrap framework" />
-              <p>JavaScript</p>
-            </div>
-            <div className="tech-icon">
-              <img src={reactLogo} alt="bootstrap framework" />
-              <p>React</p>
-            </div>
-            <div className="tech-icon">
-              <img src={vueLogo} alt="html framework" />
-              <p>Vue</p>
-            </div>
-            <div className="tech-icon">
-              <img src="https://vue-native.io/images/logo.png" alt="html framework" />
-              <p>Vue Native</p>
-            </div>
-            <div className="tech-icon">
-              <img src={bootstrapLogo} alt="html framework" />
-              <p>Bootstrap</p>
-            </div>
+            <a target='_blank' href='https://www.typescriptlang.org/'>
+              <div className="tech-icon">
+                <img src={tsLogo} alt="bootstrap framework" />
+                <p>TypeScript</p>
+              </div>
+            </a>
+            <a target='_blank' href='https://angular.io/'>
+              <div className="tech-icon">
+                <img src={angularLogo} alt="html framework" />
+                <p>Angular</p>
+              </div>
+            </a>
+            <a target='_blank' href='https://reactjs.org/'>
+              <div className="tech-icon">
+                <img src={reactLogo} alt="bootstrap framework" />
+                <p>React</p>
+              </div>
+            </a>
+            <a target='_blank' href='https://vue-native.io/'>
+              <div className="tech-icon">
+                <img src={vuenLogo} alt="html framework" />
+                <p>Vue Native</p>
+              </div>
+            </a>
+            <a target='_blank' href='https://sass-lang.com/'>
+              <div className="tech-icon">
+                <img src={sassLogo} alt="html framework" />
+                <p>Sass</p>
+              </div>
+            </a>
           </div>
         </div>
 
         <div className="window-body">
           <h3 className="window-headline">Back End</h3>
           <div className="tech-list">
-          <div className="tech-icon">
-              <img src={nodeLogo} alt="bootstrap framework" />
-              <p>Node</p>
-            </div>
-            <div className="tech-icon">
-              <img src={restLogo} alt="bootstrap framework" />
-              <p>RESTful API</p>
-            </div>
-            <div className="tech-icon">
-              <img src={pgLogo} alt="bootstrap framework" />
-              <p>PostgreSQL</p>
-            </div>
-            <div className="tech-icon">
-              <img src={knexLogo} alt="bootstrap framework" />
-              <p>Knex</p>
-            </div>
-            <div className="tech-icon">
-              <img src="https://i.imgur.com/A8giVX5.png" alt="html framework" />
-              <p>Git Workflow</p>
-            </div>
+            <a target='_blank' href='https://nodejs.org/en/about/'>
+              <div className="tech-icon">
+                <img src={nodeLogo} alt="bootstrap framework" />
+                <p>Node</p>
+              </div>
+            </a>
+            <a target='_blank' href='https://aws.amazon.com/'>
+              <div className="tech-icon">
+                <img src={awsLogo} alt="bootstrap framework" />
+                <p>AWS</p>
+              </div>
+            </a>
+            <a target='_blank' href='https://www.postgresql.org/'>
+              <div className="tech-icon">
+                <img src={pgLogo} alt="bootstrap framework" />
+                <p>PostgreSQL</p>
+              </div>
+            </a>
+            <a target='_blank' href='http://knexjs.org/'>
+              <div className="tech-icon">
+                <img src={knexLogo} alt="bootstrap framework" />
+                <p>Knex</p>
+              </div>
+            </a>
+            <a target='_blank' href='https://git-scm.com/'>
+              <div className="tech-icon">
+                <img src={gitLogo} alt="html framework" />
+                <p>Git Workflow</p>
+              </div>
+            </a>
           </div>
         </div>
 
