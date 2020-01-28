@@ -25,31 +25,31 @@ const TechWindow = ({ techWindow }) => {
         <div className="window-body">
           <h3 className="window-headline">Front End</h3>
           <div className="tech-list">
-            <a target='_blank' href='https://www.typescriptlang.org/'>
+            <a target='_blank' rel='noopener noreferrer' href='https://www.typescriptlang.org/'>
               <div className="tech-icon">
                 <img src={tsLogo} alt="bootstrap framework" />
                 <p>TypeScript</p>
               </div>
             </a>
-            <a target='_blank' href='https://angular.io/'>
+            <a target='_blank' rel='noopener noreferrer' href='https://angular.io/'>
               <div className="tech-icon">
                 <img src={angularLogo} alt="html framework" />
                 <p>Angular</p>
               </div>
             </a>
-            <a target='_blank' href='https://reactjs.org/'>
+            <a target='_blank' rel='noopener noreferrer' href='https://reactjs.org/'>
               <div className="tech-icon">
                 <img src={reactLogo} alt="bootstrap framework" />
                 <p>React</p>
               </div>
             </a>
-            <a target='_blank' href='https://vue-native.io/'>
+            <a target='_blank' rel='noopener noreferrer' href='https://vue-native.io/'>
               <div className="tech-icon">
                 <img src={vuenLogo} alt="html framework" />
                 <p>Vue Native</p>
               </div>
             </a>
-            <a target='_blank' href='https://sass-lang.com/'>
+            <a target='_blank' rel='noopener noreferrer' href='https://sass-lang.com/'>
               <div className="tech-icon">
                 <img src={sassLogo} alt="html framework" />
                 <p>Sass</p>
@@ -61,31 +61,31 @@ const TechWindow = ({ techWindow }) => {
         <div className="window-body">
           <h3 className="window-headline">Back End</h3>
           <div className="tech-list">
-            <a target='_blank' href='https://nodejs.org/en/about/'>
+            <a target='_blank' rel='noopener noreferrer' href='https://nodejs.org/en/about/'>
               <div className="tech-icon">
                 <img src={nodeLogo} alt="bootstrap framework" />
                 <p>Node</p>
               </div>
             </a>
-            <a target='_blank' href='https://aws.amazon.com/'>
+            <a target='_blank' rel='noopener noreferrer' href='https://aws.amazon.com/'>
               <div className="tech-icon">
                 <img src={awsLogo} alt="bootstrap framework" />
                 <p>AWS</p>
               </div>
             </a>
-            <a target='_blank' href='https://www.postgresql.org/'>
+            <a target='_blank' rel='noopener noreferrer' href='https://www.postgresql.org/'>
               <div className="tech-icon">
                 <img src={pgLogo} alt="bootstrap framework" />
                 <p>PostgreSQL</p>
               </div>
             </a>
-            <a target='_blank' href='http://knexjs.org/'>
+            <a target='_blank' rel='noopener noreferrer' href='http://knexjs.org/'>
               <div className="tech-icon">
                 <img src={knexLogo} alt="bootstrap framework" />
                 <p>Knex</p>
               </div>
             </a>
-            <a target='_blank' href='https://git-scm.com/'>
+            <a target='_blank' rel='noopener noreferrer' href='https://git-scm.com/'>
               <div className="tech-icon">
                 <img src={gitLogo} alt="html framework" />
                 <p>Git Workflow</p>
