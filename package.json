@@ -6,7 +6,8 @@
     "handlebars": "^4.4.5",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8"
+    "react-scripts": "2.1.8",
+    "webamp": "^1.4.1-beta01"
   },
   "scripts": {
     "start": "react-scripts start",
