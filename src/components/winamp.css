@@ -1,0 +1,5 @@
+
+/* winamp looks better without 98 style borders */
+#main-window, #equalizer-window, #playlist-window {
+  border: none;
+}

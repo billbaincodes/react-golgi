@@ -1,12 +1,12 @@
 import React from "react";
 
-const Window = ({title, video, videoWindow}) => {
+const Window = ({title, video, windowToggles}) => {
   return (
     <div className="window-container">
       <div className="window">
         <div className="window-title">
           <div>{title}</div>
-          <div className="close-button" onClick={() => videoWindow(false)}>
+          <div className="close-button" onClick={() => windowToggles('video')}>
             X
           </div>
         </div>

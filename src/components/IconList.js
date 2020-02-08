@@ -5,15 +5,9 @@ import myPC from "../assets/mycomputer.png";
 import aim from "../assets/aim-icon.png"
 import myst from "../assets/mystIcon.png"
 import winamp from "../assets/winamp-icon.png"
-import walkTheLine from "../assets/johnny-cash.m4a"
 import aimAlert from "../assets/aim-alert.mp4"
 
 const IconList = ({ projectWindow, windowToggles }) => {
-
-  let winampPlayer = () => {
-    var audio = new Audio(walkTheLine);
-    audio.play();
-  }
 
   let aimPlayer = () => {
     var audio = new Audio(aimAlert);
@@ -38,11 +32,11 @@ const IconList = ({ projectWindow, windowToggles }) => {
         <img onClick={aimPlayer} src={aim} alt="aim" />
         <p>AIM</p>
       </div>
-      <div onClick={() => windowToggles('videoToggle')} className="icon">
+      <div onClick={() => windowToggles('video')} className="icon">
         <img src={myst} alt="myst" />
         <p>Myst</p>
       </div>
-      <div onClick={winampPlayer} className="icon">
+      <div onClick={() => windowToggles('winamp')} className="icon">
         <img src={winamp} alt="winamp" />
         <p>Winamp</p>
       </div>

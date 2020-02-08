@@ -37,7 +37,8 @@ class App extends Component {
       techToggle: false,
       projectToggle: false,
       windowToggle: false,
-      videoToggle: false,
+      video: false,
+      winamp: false,
     },
   };
 
@@ -62,7 +63,7 @@ class App extends Component {
     let toggles = {...this.state.windowToggles}
     for (let toggle in toggles) {
       if (toggle === selection) { 
-        toggles[toggle] = true;
+        toggles[toggle] = !toggles[toggle];
       } else { toggles[toggle] = false}
     }
     this.setState({ windowToggles: toggles })
@@ -119,7 +120,9 @@ class App extends Component {
           windowToggles={this.windowToggles}
         />
 
-        <Winamp />
+        {this.state.windowToggles.winamp && (
+          <Winamp windowToggles={this.windowToggles} />
+        )}
 
         {this.state.projectToggle && (
           <ProjectWindow projectWindow={this.projectWindow} />
@@ -128,11 +131,12 @@ class App extends Component {
         {this.state.aboutToggle && (
           <AboutWindow aboutWindow={this.aboutWindow} />
         )}
-        {this.state.windowToggles.videoToggle && (
+        {this.state.windowToggles.video && (
           <VideoWindow
             title="Myst"
             video="https://www.youtube.com/embed/D30r0iRH73Q?controls=0&amp;start=96"
             videoWindow={this.videoWindow}
+            windowToggles={this.windowToggles}
           />
         )}
         {this.state.menuToggle && (
