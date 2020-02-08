@@ -1,28 +1,27 @@
 import React, { Component } from "react";
 import Start from "./components/Start";
 import StartMenu from "./components/StartMenu";
-import VideoWindow from "./components/Windows/VideoWindow"
+import VideoWindow from "./components/Windows/VideoWindow";
 import AboutWindow from "./components/Windows/AboutWindow.js";
 import TechWindow from "./components/Windows/TechWindow.js";
 import ProjectWindow from "./components/Windows/ProjectWindow.js";
 import "./App.css";
 import IconList from "./components/IconList.js";
+import Winamp from './components/Winamp.js'
 
 class App extends Component {
-
   styles = [
-    'background: linear-gradient(#000184, #fffff3)'
-    , 'border: 1px solid #000184'
-    , 'color: white'
-    , 'text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3)'
-    , 'line-height: 30px'
-].join(';');
-
+    "background: linear-gradient(#000184, #fffff3)",
+    "border: 1px solid #000184",
+    "color: white",
+    "text-shadow: 0 1px 0 rgba(0, 0, 0, 0.3)",
+    "line-height: 30px"
+  ].join(";");
 
   componentDidMount() {
     this.timeFinder();
-    setInterval(this.timeFinder, 10000);
-    console.log('%c Thanks for stoppin\' on by! - Bill ', this.styles);
+    setInterval(this.timeFinder, 6000);
+    this.windowToggles()
   }
 
   state = {
@@ -31,7 +30,15 @@ class App extends Component {
     techToggle: false,
     projectToggle: false,
     windowToggle: false,
-    currentTime: "11:25"
+    currentTime: "11:25",
+    windowToggles: {
+      menuToggle: false,
+      aboutToggle: false,
+      techToggle: false,
+      projectToggle: false,
+      windowToggle: false,
+      videoToggle: false,
+    },
   };
 
   timeFinder = () => {
@@ -40,8 +47,9 @@ class App extends Component {
     if (hour > 12) {
       hour -= 12;
     }
-    let minute = (date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes() )
-    let time = hour + ":" + minute
+    let minute =
+      date.getMinutes() < 10 ? "0" + date.getMinutes() : date.getMinutes();
+    let time = hour + ":" + minute;
     this.setState({ currentTime: time });
   };
 
@@ -49,13 +57,26 @@ class App extends Component {
     this.setState({ menuToggle: !this.state.menuToggle });
   };
 
+
+  windowToggles = selection => {
+    let toggles = {...this.state.windowToggles}
+    for (let toggle in toggles) {
+      if (toggle === selection) { 
+        toggles[toggle] = true;
+      } else { toggles[toggle] = false}
+    }
+    this.setState({ windowToggles: toggles })
+  }
+
+
+
   aboutWindow = toggle => {
     this.setState({
       aboutToggle: toggle,
       menuToggle: false,
       techToggle: false,
       projectWindow: false,
-      videoToggle: false,
+      videoToggle: false
     });
   };
   techWindow = toggle => {
@@ -64,7 +85,7 @@ class App extends Component {
       menuToggle: false,
       aboutToggle: false,
       projectWindow: false,
-      videoToggle: false,
+      videoToggle: false
     });
   };
   projectWindow = toggle => {
@@ -73,7 +94,7 @@ class App extends Component {
       menuToggle: false,
       aboutToggle: false,
       techToggle: false,
-      videoToggle: false,
+      videoToggle: false
     });
   };
   videoWindow = toggle => {
@@ -82,31 +103,51 @@ class App extends Component {
       projectToggle: false,
       menuToggle: false,
       aboutToggle: false,
-      techToggle: false,
+      techToggle: false
     });
+  };
+
+  openWinamp() {
+    this.webamp.reopen()
   }
 
   render() {
     return (
-        <div>
-          <IconList projectWindow={this.projectWindow} videoWindow={this.videoWindow} />
-          {this.state.projectToggle && <ProjectWindow projectWindow={this.projectWindow} />}
-          {this.state.techToggle && <TechWindow techWindow={this.techWindow} />}
-          {this.state.aboutToggle && <AboutWindow aboutWindow={this.aboutWindow} />}
-          {this.state.videoToggle && <VideoWindow title='Myst' video='https://www.youtube.com/embed/D30r0iRH73Q?controls=0&amp;start=96' videoWindow={this.videoWindow}/>}
-          {this.state.menuToggle && (
-            <StartMenu
-              menuToggle={this.menuToggle}
-              aboutWindow={this.aboutWindow}
-              techWindow={this.techWindow}
-              projectWindow={this.projectWindow}
-            />
-          )}
-          <Start
-            currentTime={this.state.currentTime}
-            menuToggle={this.menuToggle}
+      <div>
+        <IconList
+          projectWindow={this.projectWindow}
+          windowToggles={this.windowToggles}
+        />
+
+        <Winamp />
+
+        {this.state.projectToggle && (
+          <ProjectWindow projectWindow={this.projectWindow} />
+        )}
+        {this.state.techToggle && <TechWindow techWindow={this.techWindow} />}
+        {this.state.aboutToggle && (
+          <AboutWindow aboutWindow={this.aboutWindow} />
+        )}
+        {this.state.windowToggles.videoToggle && (
+          <VideoWindow
+            title="Myst"
+            video="https://www.youtube.com/embed/D30r0iRH73Q?controls=0&amp;start=96"
+            videoWindow={this.videoWindow}
           />
-        </div>
+        )}
+        {this.state.menuToggle && (
+          <StartMenu
+            menuToggle={this.menuToggle}
+            aboutWindow={this.aboutWindow}
+            techWindow={this.techWindow}
+            projectWindow={this.projectWindow}
+          />
+        )}
+        <Start
+          currentTime={this.state.currentTime}
+          menuToggle={this.menuToggle}
+        />
+      </div>
     );
   }
 }

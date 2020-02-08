@@ -8,7 +8,7 @@ import winamp from "../assets/winamp-icon.png"
 import walkTheLine from "../assets/johnny-cash.m4a"
 import aimAlert from "../assets/aim-alert.mp4"
 
-const IconList = ({ projectWindow, videoWindow }) => {
+const IconList = ({ projectWindow, windowToggles }) => {
 
   let winampPlayer = () => {
     var audio = new Audio(walkTheLine);
@@ -38,7 +38,7 @@ const IconList = ({ projectWindow, videoWindow }) => {
         <img onClick={aimPlayer} src={aim} alt="aim" />
         <p>AIM</p>
       </div>
-      <div onClick={() => videoWindow(true)} className="icon">
+      <div onClick={() => windowToggles('videoToggle')} className="icon">
         <img src={myst} alt="myst" />
         <p>Myst</p>
       </div>
