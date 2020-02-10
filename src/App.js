@@ -21,7 +21,8 @@ class App extends Component {
   componentDidMount() {
     this.timeFinder();
     setInterval(this.timeFinder, 6000);
-    this.windowToggles()
+    this.windowToggles();
+    console.log('%c Thanks for stoppin\' on by! - Bill ', this.styles);
   }
 
   state = {
