@@ -22,11 +22,6 @@ const Window = ({title, video, windowToggles}) => {
               fullscreen="true"
             />
         </div>
-        {/* <div className="window-buttons">
-          <div onClick={() => (false)}>OK</div>
-          <div onClick={() => (false)}>Cancel</div>
-          <div>Help</div>
-        </div> */}
       </div>
     </div>
   );

@@ -113,37 +113,3 @@ class AboutWindow extends Component {
 }
 
 export default AboutWindow;
-
-/*
-        <div className="project-body">
-          <div className="project-info">
-            <div className="project-demo">
-              <h1>flô</h1>
-              <h3> Music/Fitness Mobile App</h3>
-              <iframe
-                height="480px"
-                width="270px"
-                src="https://www.youtube-nocookie.com/embed/0B5-3Z14w04"
-                frameborder="0"
-                allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              />
-              <div />
-            </div>
-            {/* <div className="tech-used">
-              <h3>tech</h3>
-              <div className="tech-used-list">
-                <img height="38px" src={vueLogo} alt="vue framework" />
-                <img height="38px" src={vueLogo} alt="vue framework" />
-                <img height="38px" src={vueLogo} alt="vue framework" />
-                <img height="38px" src={vueLogo} alt="vue framework" />
-              </div>
-            </div> 
-            </div>
-            <p>
-              Running app that plays increasingly intense music the faster you
-              run. Front end is built with Vue Native, Expo and Native Base. Uses
-              Expo's Permissions API to access device location to calculate speed.
-            </p>
-          </div>
-*/
