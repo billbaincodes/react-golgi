@@ -13,7 +13,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "surge": "surge /Users/williambain/playground/Projects/personal-sites/05_portfolio5/billbain98/build billbaincodes.surge.sh"
   },
   "eslintConfig": {
     "extends": "react-app"
