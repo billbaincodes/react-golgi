@@ -22,8 +22,8 @@ const StartMenu = ({ menuToggle, aboutWindow, techWindow, projectWindow }) => {
         <li onClick={() => techWindow(true)} className="programs menu-button">
           Tech
         </li>
-        <li onClick={() => projectWindow(true)} className="favorites menu-button">Projects</li>
-        <a href="https://drive.google.com/file/d/14wBJU2BaEvWAcMt3MkwI7bqjRCjYY4hK/view?usp=sharing" target="blank">
+        {/* <li onClick={() => projectWindow(true)} className="favorites menu-button">Projects</li> */}
+        <a href="https://drive.google.com/file/d/1IL99rE92LKueGsvmmetHXXbL_wCcfl7U/view?usp=sharing" target="blank">
         <li className="documents menu-button">Resume</li>
         </a>
         <a href="https://github.com/billbaincodes" target="blank">
