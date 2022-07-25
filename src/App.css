@@ -147,7 +147,7 @@ iframe {
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
   color: white;
-  top: 345px;
+  bottom: 100px;
   left: -80px;
   font-size: 25px;
   font-weight: bold;
